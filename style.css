@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(10, 36, 71);
+  position: relative;
+}
+nav {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 11vw;
+  border-bottom: 1px solid #0a2447;
+  box-shadow: 2px 3px 30px rgb(35, 130, 224);
+  background-color: rgb(10, 36, 71);
+position: fixed;
+z-index: 1;
+}
+
+nav h1 {
+  color: rgb(35, 130, 224);
+  font-size: 3vw;
+  font-weight:900 ;
+  
+}
+nav span {
+  color: white;
+}
+.nav2 {
+  width: 400px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+}
+.nav2 a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5vw;
+  transition: 1.2s linear;
+  position: relative;
+  
+}
+.nav3{
+  width: 200px;
+  display: flex;
+}
+.nav3 i {
+  gap: 2.5vw;
+  text-decoration: none;
+  font-size: 1.6vw;
+  padding: 0.6vw;
+  color: white;
+  border: 2px solid rgb(35, 130, 224);
+  height: 3w;
+  width: 3vw;
+  border-radius: 50%;
+  margin-right: 2vw;
+}
+.nav3 i{
+  display: inline-block;
+}
+.nav3 i:hover{
+  background-color: rgb(35, 130, 224);
+  color: rgba(57, 39, 39, 0.845);
+  box-shadow: 0 0 20px rgb(35, 130, 224);
+}
+ #menu{
+  display: none;
+}
+
+.nav2 a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background: rgb(35, 130, 224);
+  transition: all ease 1s;
+}
+
+.nav2 a:hover:after {
+  width: 100%;
+}
+.nav2 a:active {
+  color: rgb(35, 130, 224);
+  background-color: none;
+}
+
+.home {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-bottom: 3px solid white;
+
+}
+.hi {
+  width: 55%;
+  height: calc(100% - 70px);
+  padding-left: 3vw;
+  text-shadow: 5px 5px 5px rgb(59, 71, 139);
+  font-size: 1.2vw;
+  margin-top: 25%;
+  
+}
+.hi h1{
+  position: relative;
+  font-size: 2.7vw;
+  /* color: rgb(35, 130, 224); */
+}
+.hi h1::first-letter{
+  color: rgb(35, 130, 224);
+  font-size: 5vw;
+  font-family: fantasy;
+}
+.hi  h1:hover{
+  font-size: 3vw;
+}
+.hi  span:hover{
+  font-size: 2vw;
+}
+.hi span{
+  font-size: 1.8vw;
+}
+.hi span {
+  color: rgb(35, 130, 224);
+}
+.image {
+  width: 45%;
+  height: calc(100% - 70px);
+  padding: 0 7vw;
+  margin-top: 25%;
+  
+
+
+}
+.image img {
+  height: 450px;
+  width: 500px;
+  background-position: 100% -100%;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 5px 20px 60px rgb(35, 130, 224);
+  transition: 1s all;
+}
+ .hi h1:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 5px;
+  background: rgb(119, 164, 209);
+  transition: all ease 1s;
+}
+
+.hi h1:hover:after {
+  width: 75%;
+}
+.hi i{
+  font-size: 1.6vw;
+  color: white;
+  margin-right: 15px;
+  height: 3vw;
+  width: 3vw;
+  border: 3px solid rgb(35, 130, 224);
+  border-radius: 50%;
+  text-align: center;
+padding: 0.6vw;
+  background: transparent;
+  text-decoration: none;
+  transition: 0.1s ease;
+}
+
+.hi i:hover{
+  background-color: rgb(35, 130, 224);
+  color: rgba(57, 39, 39, 0.845);
+  box-shadow: 0 0 20px rgb(35, 130, 224);
+}
+.about, .container2{
+  height: 100%;
+  width: 100%;
+  background-color:rgb(10, 36, 71);
+  color: white;
+  
+}
+.about .container{
+  border-bottom: 3px solid white;
+  margin-top: 5%;
+}
+
+.about .imagediv{
+  border-radius: 50%;
+}
+
+
+/* Add the animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animations */
+.fade-in {
+  animation: fadeIn 2s ease-in-out ;
+  border-radius: 50%;
+}
+
+.slide-in-left {
+  animation: slideInLeft 1.5s ease-in-out ;
+  font-weight: 800;
+}
+.about-btn{
+  padding: 1vw 2vw;
+  font-weight: 700;
+  transition: 0.9s ease;
+}
+.lead p{
+  font-size: 1.vw;
+}
+.projects{
+ 
+  height: 100%;
+  width: 100%;
+}
+.projects h1{
+  color: rgb(35, 130, 224);
+  margin: auto;
+  text-align: center;
+  font-family: fantasy;
+  font-size: 6vw;
+  margin-bottom: 3vw;
+}
+.cards{
+  height: 430px;
+  width: 300px;
+ font-size: 1.2vw;
+ margin-left: 4vw;
+ transition: 1s ease-in;
+}
+.cards img{
+  background-position: center;
+  background-size: cover;
+}
+.contact{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(10, 36, 71);
+}
+.projects button{
+  padding: 0 1.2vw;
+  font-size: 1.2vw;
+  transition: 0.5s ease-in-out;
+}
+.projects button:hover{
+  background: rgb(35, 130, 224);
+  color: white;
+}
+.cards:hover{
+  box-shadow: 8px 8px 90px rgb(35, 130, 224);
+  
+}
+
+
+ 
+
+@media (max-width:600px) {
+  nav{
+    width: 100%;
+  }
+  .nav2 a{
+    display: none;
+  }
+  .nav3 i{
+    display: none;
+  }
+  #menu{
+    display: block;
+    padding-right: 3vw;
+    color: white;
+    font-size: 8vw;
+  }
+  nav h1{
+    font-size: 8vw;
+  }
+  .home{
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    
+  }
+
+  .hi{
+    height: 45%;
+    width: 100%;
+    padding: 20px;
+    margin-top: 35vw;
+  }
+  .hi h1{
+    font-size: 6vw;
+  }
+  .hi h1::first-letter{
+    font-size: 9vw;
+  }
+  .hi h3{
+    font-size: 4vw;
+  }
+  .hi h1:hover{
+    font-size: 6.3vw;
+  }
+  .hi p{
+    font-size: 3.5vw;
+    line-height: 15px;
+  }
+  .hi span:hover{
+      font-size: 5vw;
+  }
+  .hi span{
+    font-size: 4.6vw;
+  }
+  .image{
+    height: 60%;
+    width: 100%;
+    margin-left: 8vw;
+  
+  }
+  .image img{
+    height: 300px;
+    width: 300px;
+  
+  }
+  .hi i{
+    font-size: 4vw;
+    height: 8vw;
+    width: 8vw;
+    padding: 1.4vw;
+  }
+  .about p{
+    font-size: 5vw;
+   
+  }
+  .about{
+  padding-left: 5vw;
+  height: 100%;
+  padding-left: 3vw;
+  width: 100%;
+  border: none;
+  padding-top: 20%;
+
+  }
+  .about img{
+    margin-left: 11vw;
+    height: 300px;
+    width: 300px;
+    
+  }
+  .about p{
+    font-size: 4.5vw;
+  }
+  .projects{
+    height: 100%;
+    width: 100%;
+    margin-top: 140%;
+  }
+  .cards p{
+   font-size: 4vw;
+   padding-left: 0;
+}
+.projects h1{
+  font-size: 11vw;
+  padding-bottom: 11vw;
+}
+.cards button{
+  font-size: 4vw;
+}
+.about, .container2{
+  height: 100vh;
+  border: none;
+}
+.about .container{
+  border: none;
+}
+}
